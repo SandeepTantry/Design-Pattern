@@ -5,8 +5,8 @@ import java.util.List;
 public class Employee
 {
     private String empName;
-    private int empId;
-    private int age;
+    private Integer empId;
+    private Integer age;
     private String address1;
     private String address2;
     private Double salary;
@@ -33,12 +33,12 @@ public class Employee
         return empName;
     }
 
-    public int getEmpId()
+    public Integer getEmpId()
     {
         return empId;
     }
 
-    public int getAge()
+    public Integer getAge()
     {
         return age;
     }
@@ -68,19 +68,67 @@ public class Employee
         return skillSet;
     }
     
+    @Override
+    public String toString()
+    {
+        StringBuilder emp = new StringBuilder();
+        if (empName != null && empName.trim() != "") emp.append("\nName --> " + getEmpName());
+        if (empId != null) emp.append("\nId --> " + getEmpId());
+        if (age != null) emp.append("\nAge --> " + getAge());
+        if (address1 != null && address1.trim() != "") emp.append("\nAddr --> " + getAddress1());
+        if (address2 != null && address2.trim() != "") emp.append(" - " + getAddress2());
+        if (salary != null) emp.append("\nSalary --> " + getSalary());
+        if (dept != null && dept.trim() != "") emp.append("\nDept --> " + getDept());
+        if (skillSet != null && !skillSet.isEmpty()) emp.append("\nSkills --> " + getSkillSet());
+        return emp.toString();
+    }
+    
+    // ----------------------------------
+    
+    // optional methods
+    public Employee cloneInstance()
+    {
+        return new Employee(this);
+    }
+    
+    public static EmployeeBuilder fromEmployee(Employee prototype)
+    {
+        return new EmployeeBuilder(prototype);
+    }
+    
+    // no args builder (optional)
+    public static EmployeeBuilder basicEmployee()
+    {
+        return basicEmployee(null, null);
+    }
+
+    // outer interface method
+    public static EmployeeBuilder basicEmployee(final String empName, final Integer empId)
+    {
+        return new EmployeeBuilder(empName, empId);
+    }
+
     // Builder class
     public static class EmployeeBuilder
     {
         private Employee prototype;
         
         // required params.
-        public EmployeeBuilder(final String empName, final int empId)
+        private EmployeeBuilder(final String empName, final Integer empId)
         {
+            prototype = new Employee(null);
             prototype.empName = empName;
             prototype.empId = empId;
         }
         
-        public EmployeeBuilder age(final int age)
+        // optional (mixture of prototype)
+        private EmployeeBuilder(final Employee prototype)
+        {
+            this.prototype = prototype != null ? prototype.cloneInstance() : new Employee(null); 
+        }
+        
+        // optional params
+        public EmployeeBuilder age(final Integer age)
         {
             prototype.age = age;
             return this;
@@ -116,9 +164,11 @@ public class Employee
             return this;
         }
         
-        /*public Employee build()
+        public Employee build()
         {
-            return new Employee(this);
-        }*/
+            // both will work
+            //return new Employee(prototype);
+            return prototype.cloneInstance();
+        }
     }
 }
