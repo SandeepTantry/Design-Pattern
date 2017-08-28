@@ -23,8 +23,14 @@ public class PrototypeModelTester
         // without cloning
         temp1 = model.getSomeList();
         temp1.add("Howdy");
+        System.out.println(temp1);
         temp2 = model.getSomeList();
         temp2.add("Wassup");
+        
+        System.out.println(temp1);
+        System.out.println(temp2);
+        
+        model.addToList("someValue");
         
         System.out.println(temp1);
         System.out.println(temp2);

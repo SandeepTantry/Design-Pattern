@@ -37,6 +37,11 @@ public class PrototypeModel implements Cloneable
         someList.add("Hello");
     }
     
+    public void addToList(final String value)
+    {
+        someList.add(value);
+    }
+    
     @Override
     public Object clone() throws CloneNotSupportedException
     {
