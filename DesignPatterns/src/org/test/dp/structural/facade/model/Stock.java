@@ -3,7 +3,6 @@ package org.test.dp.structural.facade.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -33,7 +32,7 @@ public class Stock
 	
 	public void removeItem(Item item, int qty)
 	{
-		Iterator<Entry<String, List<Item>>> iterator = stockItems.entrySet().iterator();
+		/*Iterator<Entry<String, List<Item>>> iterator = stockItems.entrySet().iterator();
 		
 		while(iterator.hasNext())
 		{
@@ -41,7 +40,18 @@ public class Stock
 			if (entry.getKey().equals(item.getType()))
 			{
 				List<Item> items = new ArrayList<>(entry.getValue());
+				//List<Item> items = entry.getValue();
 				for (int i=0; i < qty; i++) items.remove(item);
+				entry.setValue(items);
+			}
+		}*/
+		
+		for (Entry<String, List<Item>> entry : stockItems.entrySet())
+		{
+			if (entry.getKey().equals(item.getType()))
+			{
+				List<Item> items = new ArrayList<>(entry.getValue());
+				for (int i = 0; i < qty; i++) items.remove(item);
 				entry.setValue(items);
 			}
 		}
@@ -58,6 +68,7 @@ public class Stock
 		Item brush2 = Item.buildItem("brush").id(123460L).name("Sensodent").price(30D).build();
 		Item brush3 = Item.buildItem("brush").id(123461L).name("Sensodent").price(30D).build();
 		
+		// Arrays.asList returns an fixed sized array, which can't be modified.
 		List<Item> pastes = Arrays.asList(paste1, paste2, paste3);
 		List<Item> brushes = Arrays.asList(brush1, brush2, brush3);
 		
