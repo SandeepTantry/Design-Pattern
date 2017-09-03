@@ -8,13 +8,13 @@ public class CompositeDrawingTester
 {
     public static void main(String[] args)
     {
-        Triangle triangle = new Triangle("Triangle1");
+        final Triangle triangle = new Triangle("Triangle1");
         triangle.fill("Red");
         
-        Circle circle = new Circle("Circle1");
+        final Circle circle = new Circle("Circle1");
         circle.fill("Green");
         
-        GenericShape generic = new GenericShape();
+        final GenericShape generic = new GenericShape();
         generic.add(triangle);
         generic.add(circle);
         generic.add(new Triangle("Triangle2"));
