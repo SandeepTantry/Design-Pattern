@@ -11,7 +11,7 @@ public class FlyweightTester
     
     public static void main(String[] args)
     {
-       for (int i = 0; i < 5; ++i) {
+       for (int i = 0; i < 20; ++i) {
           Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
           circle.setX(getRandomX());
           circle.setY(getRandomY());
