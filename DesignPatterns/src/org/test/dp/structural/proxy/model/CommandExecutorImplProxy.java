@@ -1,5 +1,11 @@
 package org.test.dp.structural.proxy.model;
 
+/**
+ * Provide a surrogate or placeholder for another object to control access to it.
+ * a class represents functionality of another class
+ * we create object having original object to interface its functionality to outer world.
+ */
+
 public class CommandExecutorImplProxy implements CommandExecutor
 {
 	private boolean isAdmin;
