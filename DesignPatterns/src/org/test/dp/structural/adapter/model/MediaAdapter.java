@@ -1,5 +1,9 @@
 package org.test.dp.structural.adapter.model;
 
+/**
+ * 2 unrelated interfaces can work together
+ */
+
 public class MediaAdapter implements MediaPlayer
 {
     private final VLCPlayer advancedPlayer = new VLCPlayer();

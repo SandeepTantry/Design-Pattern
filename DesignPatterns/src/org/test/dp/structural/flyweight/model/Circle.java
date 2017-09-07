@@ -32,4 +32,12 @@ public class Circle implements Shape
     {
        System.out.println("Circle: Draw() [Color : " + color + ", x : " + x + ", y :" + y + ", radius :" + radius + "]");
     }
+    
+    @Override
+    public boolean equals(Object o)
+    {
+    	if (o != null || !(o instanceof Circle)) return false;
+    	Circle c = (Circle) o;
+        return color.equals(c.color) && x == c.x && y == c.y; 
+    }
 }

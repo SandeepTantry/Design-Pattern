@@ -5,6 +5,12 @@ package org.test.dp.structural.facade.model;
  * It also decouples the code that uses the system from the details of the subsystems, making it easier to modify the system later.
  * It provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
  * Can be related to Abstract Factory creational design pattern.
+ * 
+ * Facade design pattern is more like a helper for client applications, it doesn’t hide subsystem interfaces from the client. Whether to use Facade or not is completely dependent on client code.
+ * Facade design pattern can be applied at any point of development, usually when the number of interfaces grow and system gets complex.
+ * Subsystem interfaces are not aware of Facade and they shouldn’t have any reference of the Facade interface.
+ * Facade design pattern should be applied for similar kind of interfaces, its purpose is to provide a single interface rather than multiple interfaces that does the similar kind of jobs.
+ * We can use Factory pattern with Facade to provide better interface to client systems.
  */
 public class FacadeSystem
 {
