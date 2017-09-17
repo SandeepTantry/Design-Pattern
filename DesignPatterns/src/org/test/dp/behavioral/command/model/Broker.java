@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Broker
 {
-    public List<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
     
     public void takeOrder(final Order order)
     {
@@ -25,5 +25,7 @@ public class Broker
         {
             order.execute();
         }
+        
+        System.out.println(System.getProperty("os.name"));
     }
 }
