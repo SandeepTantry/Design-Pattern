@@ -32,7 +32,10 @@ public class MementoPatterTester
         originator2.setState("state#03");
         System.out.println("Current state of obj2 --> " + originator2.getState());
         caretaker2.save(originator2); // do not save this
-        
+        originator2.setState("state#04");
+        System.out.println("Current state of obj2 --> " + originator2.getState());
+        //caretaker2.save(originator2); // do not save this
+
         System.out.println();
         
         // series of undo
