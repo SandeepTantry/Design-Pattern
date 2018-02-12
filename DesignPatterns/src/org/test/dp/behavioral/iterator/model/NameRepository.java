@@ -58,7 +58,7 @@ public class NameRepository implements Container<String>
 			if (this.hasNext())
 			{
 				names = Arrays.stream(names).filter(e -> e != names[index - 1]).toArray(String[]::new);
-				-- index;
+				//-- index;
 			}
 			else
 			{
@@ -78,7 +78,7 @@ public class NameRepository implements Container<String>
 				}
 				namesDup[index - 1] = t;
 				names = namesDup;
-				++index;
+				++index; // add this to make sure that it is pointing to next element. otherwise it will awlays be pointing to same element.
 			}
 			else
 			{
