@@ -1,4 +1,6 @@
-package org.test.dp.structural.facade.model;
+package org.test.dp.structural.facade.test;
+
+import org.test.dp.structural.facade.model.TravelFacade;
 
 public class TravelFacadeTester
 {
