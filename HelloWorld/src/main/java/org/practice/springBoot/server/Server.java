@@ -19,5 +19,6 @@ public class Server implements EmbeddedServletContainerCustomizer
     public void customize(final ConfigurableEmbeddedServletContainer container)
     {
         container.setPort(2018); // Properties overridden in this file will take precedence over .properties file
+        container.setContextPath("/Test");
     }
 }
