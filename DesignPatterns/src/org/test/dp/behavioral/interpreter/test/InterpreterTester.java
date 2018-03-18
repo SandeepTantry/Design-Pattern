@@ -1,6 +1,6 @@
 package org.test.dp.behavioral.interpreter.test;
 
-import org.test.dp.behavioral.interpreter.model.InfixToPrefix;
+//import org.test.dp.behavioral.interpreter.model.InfixToPrefix;
 import org.test.dp.behavioral.interpreter.model.InfixToPostfix;
 
 public class InterpreterTester

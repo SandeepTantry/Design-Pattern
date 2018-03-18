@@ -8,6 +8,7 @@ import org.test.dp.behavioral.mediator.model.Flight;
 import org.test.dp.behavioral.mediator.model.KingFisher;
 import org.test.dp.behavioral.mediator.model.SpiceJet;
 
+@SuppressWarnings("deprecation")
 public class MediatorPatternTester
 {
     public static void main(String[] args)

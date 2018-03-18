@@ -4,7 +4,7 @@ import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTyp
 import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTypeEnum.ENGLISH;
 import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTypeEnum.HINDI;
 import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTypeEnum.KANNADA;
-import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTypeEnum.NONE;
+//import static org.test.dp.behavioral.iterator.model.ChannelCollection.ChannelTypeEnum.NONE;
 
 import org.test.dp.behavioral.iterator.model.Channel;
 import org.test.dp.behavioral.iterator.model.ChannelCollection;
@@ -22,11 +22,11 @@ public class ChannelIteratorTest
 		final Channel ch5 = new Channel(94.3, "Radio One", ENGLISH);
 		final Channel ch6 = new Channel(95.0, "Radio Mirchi (Radio 95)", HINDI);
 		final Channel ch7 = new Channel(98.3, "Radio Mirchi", KANNADA);
-		final Channel ch8 = new Channel(100.1, "Amrutavarshini", NONE);
+		//final Channel ch8 = new Channel(100.1, "Amrutavarshini", NONE);
 		final Channel ch9 = new Channel(101.3, "FM Rainbow", ALL);
-		final Channel ch10 = new Channel(102.9, "Vivid Bharati", ALL);
+		//final Channel ch10 = new Channel(102.9, "Vivid Bharati", ALL);
 		final Channel ch11 = new Channel(104, "Fever", HINDI);
-		final Channel ch12 = new Channel(106.4, "Gyanvani", NONE);
+		//final Channel ch12 = new Channel(106.4, "Gyanvani", NONE);
 		
 		final ChannelCollection<Channel> collection = new ChannelCollectionImpl();
 		collection.addChannel(ch1);

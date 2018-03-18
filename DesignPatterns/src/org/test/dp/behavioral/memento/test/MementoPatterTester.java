@@ -1,6 +1,6 @@
 package org.test.dp.behavioral.memento.test;
 
-import org.test.dp.behavioral.memento.model.Caretaker;
+//import org.test.dp.behavioral.memento.model.Caretaker;
 import org.test.dp.behavioral.memento.model.Caretaker2;
 import org.test.dp.behavioral.memento.model.Originator;
 
