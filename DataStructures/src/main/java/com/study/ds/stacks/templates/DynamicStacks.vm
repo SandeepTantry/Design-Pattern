@@ -1,0 +1,8 @@
+<a href="../stacks">Stacks Home</a>
+<h1>Dynamic Stacks</h1>
+<ul id="selectedOption">
+	<li value=1>Push</li>
+	<li value=2>Pop</li>
+	<li value=3>Peek</li>
+	<li value=4>Display</li>
+</ul>
